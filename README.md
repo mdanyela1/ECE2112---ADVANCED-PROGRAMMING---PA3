@@ -27,35 +27,35 @@ Ensure you have Python installed and install pandas with:
 pip install pandas
 
 # How to Run
-1. Place cars.csv in the same directory as the scripts.
-2. Run each script separately:
+  1. Place cars.csv in the same directory as the scripts.
+  2. Run each script separately:
 
-python problem1.py
-python problem2.py
+  python problem1.py
+  python problem2.py
 
 # Problem 1 - Load Data & Display Rows
-a. Load the cars.csv file into a DataFrame named cars.
-b. Display the first five rows.
-c. Display the last five rows.
-d. Concatenate the two results.
+  a. Load the cars.csv file into a DataFrame named cars.
+  b. Display the first five rows.
+  c. Display the last five rows.
+  d. Concatenate the two results.
 
 Code:
-import pandas as pd
+  import pandas as pd
 
-# Load the csv file in the same folder
-cars = pd.read_csv('cars.csv')
+  # Load the csv file in the same folder
+  cars = pd.read_csv('cars.csv')
 
-# Locate the first 5 rows
-first = cars.loc[cars.index[0:5]]
+  # Locate the first 5 rows
+  first = cars.loc[cars.index[0:5]]
 
-# Locate the last 5 rows
-last = cars.loc[cars.index[27:32]]
+  # Locate the last 5 rows
+  last = cars.loc[cars.index[27:32]]
 
-# Concatenate first & last
-print(pd.concat([first, last]))
+  # Concatenate first & last
+  print(pd.concat([first, last]))
 
-# Alternative using head() and tail()
-print(pd.concat([cars.head(5), cars.tail(5)]))
+  # Alternative using head() and tail()
+  print(pd.concat([cars.head(5), cars.tail(5)]))
 
 Sample Output:
              Model   mpg  cyl   disp   hp  drat    wt   qsec  vs  am  gear  carb
@@ -71,31 +71,31 @@ Sample Output:
 31     Volvo 142E   21.4    4  121.0  109  4.11  2.780  18.60   1   1     4     2
 
 # Problem 2 - Subsetting, Slicing, and Indexing
-a. Display the first five rows with odd-numbered columns (1, 3, 5, 7...).
-b. Display the row where the Model is Mazda RX4.
-c. Find the number of cylinders (cyl) for the car model Camaro Z28.
-d. Determine how many cylinders (cyl) and what gear type (gear) the car models Mazda RX4 Wag, Ford Pantera L, and Honda Civic have.
+  a. Display the first five rows with odd-numbered columns (1, 3, 5, 7...).
+  b. Display the row where the Model is Mazda RX4.
+  c. Find the number of cylinders (cyl) for the car model Camaro Z28.
+  d. Determine how many cylinders (cyl) and what gear type (gear) the car models Mazda RX4 Wag,   Ford Pantera L, and Honda Civic have.
 
 Code:
-import pandas as pd
+  import pandas as pd
 
-# Load the csv file
-cars = pd.read_csv('cars.csv')
+  # Load the csv file
+  cars = pd.read_csv('cars.csv')
 
-# a. First five rows with odd-numbered columns
-print(cars.iloc[0:5, 0:13:2])
+  # a. First five rows with odd-numbered columns
+  print(cars.iloc[0:5, 0:13:2])
 
-# b. Row with 'Mazda RX4'
-print(cars.loc[cars['Model'] == 'Mazda RX4'])
+  # b. Row with 'Mazda RX4'
+  print(cars.loc[cars['Model'] == 'Mazda RX4'])
 
-# c. Cylinders in Camaro Z28
-n = cars.loc[cars['Model'] == 'Camaro Z28', 'cyl'].values[0]
-print("Cylinders in Camaro Z28:", n)
+  # c. Cylinders in Camaro Z28
+  n = cars.loc[cars['Model'] == 'Camaro Z28', 'cyl'].values[0]
+  print("Cylinders in Camaro Z28:", n)
 
-# d. Cylinders and Gear for selected models
-models = ['Mazda RX4 Wag', 'Ford Pantera L', 'Honda Civic']
-MD = cars.set_index("Model")
-print(MD.loc[models, ["cyl", "gear"]])
+  # d. Cylinders and Gear for selected models
+  models = ['Mazda RX4 Wag', 'Ford Pantera L', 'Honda Civic']
+  MD = cars.set_index("Model")
+  print(MD.loc[models, ["cyl", "gear"]])
 
 Sample Output:
 
