@@ -11,20 +11,20 @@ The project is divided into two main problems:
 2. Problem 2 → Extracting specific information using subsetting, slicing, and indexing operations.
 
 # Files in the Repository
-- cars.csv → Dataset containing car specifications.
-- problem1.py → Python script for Problem 1 (loading and displaying rows).
-- problem2.py → Python script for Problem 2 (subsetting, slicing, indexing).
-- README.md → Documentation file (this file).
+- `cars.csv` → Dataset containing car specifications.
+- `problem1.py` → Python script for Problem 1 (loading and displaying rows).
+- `problem2.py` → Python script for Problem 2 (subsetting, slicing, indexing).
+- `README.md` → Documentation file (this file).
 
 # Requirements
 - Python 3.7 or later
 - pandas library
 
 Install pandas if not already installed:
-  pip install pandas
+  `pip install pandas`
 
 # How to Run the Code
-1. Place the cars.csv file in the same directory as the Python scripts.
+1. Place the `cars.csv` file in the same directory as the Python scripts.
 2. Run the scripts from the terminal or your IDE:
 
  `python problem1.py `
@@ -32,7 +32,7 @@ Install pandas if not already installed:
 
 # Problem 1 - Load Data & Display Rows
 Tasks:
-a. Load the cars.csv file into a DataFrame named cars.
+a. Load the `cars.csv` file into a DataFrame named cars.
 b. Display the first five rows.
 c. Display the last five rows.
 d. Concatenate both results together.
