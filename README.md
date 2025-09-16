@@ -55,6 +55,10 @@ d. Concatenate both results together.
 #Alternative using head() and tail()
  `print(pd.concat([cars.head(5), cars.tail(5)])) `
 
+ # Sample Output
+ <img width="707" height="415" alt="image" src="https://github.com/user-attachments/assets/84bb7f8e-e231-4d1d-9d4b-7150bccec859" />
+
+
 # Problem 2 - Subsetting, Slicing, and Indexing
 Tasks:
 a. Display the first five rows with odd-numbered columns (1, 3, 5, 7...).
@@ -85,4 +89,19 @@ d. Find the cylinders (cyl) and gear type (gear) for:
  `models = ['Mazda RX4 Wag', 'Ford Pantera L', 'Honda Civic'] `
  `MD = cars.set_index("Model") `
  `print(MD.loc[models, ["cyl", "gear"]]) `
+
+# Sample Output
+a. First 5 rows, odd-numbered columns
+<img width="410" height="221" alt="image" src="https://github.com/user-attachments/assets/1ae2e9e7-f742-4462-8229-72119e33e4bf" />
+
+b. Mazda RX4 Row
+<img width="643" height="80" alt="image" src="https://github.com/user-attachments/assets/26730df7-d715-48e4-a9a6-53a588b81fbe" />
+
+c. Cylinders in Camaro Z28
+<img width="38" height="32" alt="image" src="https://github.com/user-attachments/assets/3135f5de-278c-41b2-92d4-ddb2e8bb5bc1" />
+
+d. Cylinders & Gear Types
+<img width="232" height="190" alt="image" src="https://github.com/user-attachments/assets/b24c06ae-5ecf-4ad9-9353-1f519bed83b2" />
+
+
 
