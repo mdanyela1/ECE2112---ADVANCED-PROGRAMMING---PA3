@@ -36,19 +36,19 @@ Ensure you have Python installed and install pandas with:
 Code:
   import pandas as pd
 
-  # Load the csv file in the same folder
+  #Load the csv file in the same folder
   cars = pd.read_csv('cars.csv')
 
-  # Locate the first 5 rows
+  #Locate the first 5 rows
   first = cars.loc[cars.index[0:5]]
 
-  # Locate the last 5 rows
+  #Locate the last 5 rows
   last = cars.loc[cars.index[27:32]]
 
-  # Concatenate first & last
+  #Concatenate first & last
   print(pd.concat([first, last]))
 
-  # Alternative using head() and tail()
+  #Alternative using head() and tail()
   print(pd.concat([cars.head(5), cars.tail(5)]))
 
 Sample Output:
@@ -73,20 +73,20 @@ Sample Output:
 Code:
   import pandas as pd
 
-  # Load the csv file
+  #Load the csv file
   cars = pd.read_csv('cars.csv')
 
-  # a. First five rows with odd-numbered columns
+  #a. First five rows with odd-numbered columns
   print(cars.iloc[0:5, 0:13:2])
 
-  # b. Row with 'Mazda RX4'
+  #b. Row with 'Mazda RX4'
   print(cars.loc[cars['Model'] == 'Mazda RX4'])
 
-  # c. Cylinders in Camaro Z28
+  #c. Cylinders in Camaro Z28
   n = cars.loc[cars['Model'] == 'Camaro Z28', 'cyl'].values[0]
   print("Cylinders in Camaro Z28:", n)
 
-  # d. Cylinders and Gear for selected models
+  #d. Cylinders and Gear for selected models
   models = ['Mazda RX4 Wag', 'Ford Pantera L', 'Honda Civic']
   MD = cars.set_index("Model")
   print(MD.loc[models, ["cyl", "gear"]])
