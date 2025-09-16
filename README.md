@@ -20,7 +20,7 @@ The project is divided into two problems:
 
 ---
 
-# Requirements
+# Requirements 
 Ensure you have Python installed and install pandas with:
 
 ```bash
