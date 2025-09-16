@@ -27,8 +27,8 @@ Install pandas if not already installed:
 1. Place the cars.csv file in the same directory as the Python scripts.
 2. Run the scripts from the terminal or your IDE:
 
-  python problem1.py
-  python problem2.py
+ `python problem1.py `
+ `python problem2.py `
 
 # Problem 1 - Load Data & Display Rows
 Tasks:
@@ -38,7 +38,7 @@ c. Display the last five rows.
 d. Concatenate both results together.
 
 # Code:
-import pandas as pd
+ `import pandas as pd
 
 #Load the csv file
 cars = pd.read_csv('cars.csv')
@@ -53,7 +53,7 @@ last = cars.loc[cars.index[27:32]]
 print(pd.concat([first, last]))
 
 #Alternative using head() and tail()
-print(pd.concat([cars.head(5), cars.tail(5)]))
+print(pd.concat([cars.head(5), cars.tail(5)])) `
 
 # Problem 2 - Subsetting, Slicing, and Indexing
 Tasks:
