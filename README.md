@@ -9,23 +9,17 @@ This project demonstrates the use of **pandas** in Python to manipulate and anal
 The project is divided into two problems:
 1. **Problem 1** → Loading data and displaying first & last rows.
 2. **Problem 2** → Subsetting, slicing, and indexing to extract specific information.
-
 ---
-
 # Files
 - `cars.csv` → Dataset file containing car specifications.
 - `problem1.py` → Python script for Problem 1.
 - `problem2.py` → Python script for Problem 2.
 - `README.md` → Documentation file (this file).
-
 ---
-
 # Requirements 
 Ensure you have Python installed and install pandas with:
 
-```bash
-pip install pandas
-
+---
 # How to Run
   1. Place cars.csv in the same directory as the scripts.
   2. Run each script separately:
